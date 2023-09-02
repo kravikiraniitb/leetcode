@@ -1,4 +1,4 @@
-
+#Git
 def isMatch(s, p):
     a_s = [char for char in s]
     p_ss = [char for char in p]
@@ -55,6 +55,7 @@ def isMatch(s, p):
         #print(p_ss)
 
         #print("4")
+
         print(p_s)
         
     else:

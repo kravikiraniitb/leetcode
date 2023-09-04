@@ -2,16 +2,16 @@ import time
 
 def maxArea(height):
     start_time = time.time()
-    #l = len(height)
     fa = 0
     for x in range(len(height)):
-        for y in range(x,len(height)):
-            #h = min(height[x],height[y])
-            #b= y-x
-            #area = h*b
-            area = min(height[x],height[y])*(y-x)
-            if area > fa:
-                fa = area
+        if x < len(height) - 1:
+            for y in range(x+1,len(height)):
+                if (height[x] - height[y]) > 0:
+                   area = height[y]*(y-x)
+                else:
+                    area = height[x]*(y-x)
+                if area > fa:
+                    fa = area
     end_time = time.time()
     duration = end_time - start_time
     print(duration)

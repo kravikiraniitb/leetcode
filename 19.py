@@ -1,54 +1,25 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
+def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        arr = []
+        f = ListNode()
 
-class ListNode:
-    def __init__(self):
-        self.head = None
+        count = 0
+        current = self.head  # Start at the head node
 
-    def append(self, data):
-        new_node = Node(data)
-        if not self.head:
-            self.head = new_node
-        else:
-            current = self.head
-            while current.next:
-                current = current.next
-            current.next = new_node
+        while current is not None:
+            arr.append(current)
+            count += 1
+            current = current.next  # Move to the next node
 
-    def display(self):
-        current = self.head
-        while current:
-            print(current.data, end=" -> ")
-            current = current.next
-        print("None")
+        
+        l = len(arr)
+        n1 = l-n
+        n2 = 0
+        
+        while current is not None:
+            if n2!=n1:
+                f.append(current)
+            n2 = n2+1
+            count += 1
+            current = current.next  # Move to the next node
+        return f
 
-
-class Solution:
-
-    
-
-    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-
-        def length(h):
-            count = 0
-            current = h.head  # Start at the head node
-
-            while current is not None:
-                count += 1
-                current = current.next  # Move to the next node
-
-            return count
-
-
-
-        newl = ListNode()
-        n2 = length(head) - n
-        n3 = 0
-        for x in head:
-
-            if n3 != n2:
-                newl.append(x)
-            n3 = n3+1
-        return newl

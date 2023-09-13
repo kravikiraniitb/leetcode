@@ -8,31 +8,43 @@ class Solution:
     
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         arr = []
-        f = ListNode()
+        #f = ListNode()
+        print(head)
+        #print(head.val)
+        print(head.next)
 
         count = 0
-        #current = get_first_element(head)  # Start at the head node
-        if head.next is not None:
-            current = head
-        else:
-            current = None  # The list is empty
-
-
-        while current is not None:
-            arr.append(current.val)
-            count += 1
-            current = current.next  # Move to the next node
-
         
-        l = len(arr)
+
+        while head.next is not None:
+            arr.append(head.val)
+            count += 1
+            head = head.next  # Move to the next node
+            #print(head)
+
+        print(arr)
+        l = len(arr)+1
+        print(l)
         n1 = l-n
         n2 = 0
+        n3 = n1
         
-        while current is not None:
-            if n2!=n1:
-                f.append(current)
+        #while n3 != 0:
+        #for x in range(l)
+             # Move to the next node
+        head2 = head
+
+        while head.next is not None:
+            if n2==n1:
+                #f.append(current.val)
+                head == head.next.next
+
+                pass
             n2 = n2+1
-            count += 1
-            current = current.next  # Move to the next node
-        return f
+            #n3 = n3-1
+            head = head.next 
+
+
+
+        return head
 

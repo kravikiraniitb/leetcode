@@ -7,7 +7,7 @@
 
 def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         arr = []
-        f = ListNode()
+        #f = ListNode()
 
         count = 0
         #current = get_first_element(head)  # Start at the head node

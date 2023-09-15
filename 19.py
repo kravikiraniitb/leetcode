@@ -8,23 +8,13 @@ class Solution:
     
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         arr = []
-        #f = ListNode()
-        print(head)
-        #print(head.val)
-        print(head.next)
-
-        count = 0
-        
-
-        while head.next is not None:
-            arr.append(head.val)
-            count += 1
-            head = head.next  # Move to the next node
-            #print(head)
-
-        print(arr)
-        l = len(arr)+1
-        print(l)
+        f = ListNode()
+    
+        #count = 0
+        #head3 = head
+        nar = str(head).split("next:")
+        l = len(nar)-1
+        #print(l)
         n1 = l-n
         n2 = 0
         n3 = n1
@@ -32,19 +22,35 @@ class Solution:
         #while n3 != 0:
         #for x in range(l)
              # Move to the next node
-        head2 = head
+        #head2 = head
+        head2 = []
 
-        while head.next is not None:
-            if n2==n1:
-                #f.append(current.val)
-                head2 == head2.next.next
+        #while head.next is not None:
+        #    if n2==n1:
+         #       #f.append(current.val)
+          #      head.next == head.next.next
+#
+ #               pass
+  #          n2 = n2+1
+   #         #n3 = n3-1
+    #        head = head.next 
+     #       print(head)
+        #for x in range(l):
+        #if head.next is None:
+            #head2.append(head.val)
+        #else:
+        while head:
+            if n2 == n1:
+                print(head)
+                n2 = n2+1
+                head = head.next
 
-                pass
-            n2 = n2+1
-            #n3 = n3-1
-            head = head.next 
+            else:
+                head2.append(head.val)
+                print(head)
+                n2 = n2+1
+                head = head.next
+                
 
-
-
-        return head2
+        print(head2)
 

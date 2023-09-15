@@ -37,7 +37,7 @@ class Solution:
         while head.next is not None:
             if n2==n1:
                 #f.append(current.val)
-                head == head.next.next
+                head2 == head2.next.next
 
                 pass
             n2 = n2+1
@@ -46,5 +46,5 @@ class Solution:
 
 
 
-        return head
+        return head2
 

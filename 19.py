@@ -41,16 +41,49 @@ class Solution:
         #else:
         while head:
             if n2 == n1:
-                print(head)
+                #print(head)
                 n2 = n2+1
                 head = head.next
 
             else:
                 head2.append(head.val)
-                print(head)
+                #print(head)
                 n2 = n2+1
                 head = head.next
                 
+        #head2.reverse()
+        def ll(x,y):
+            if  x == y:
+                # y - index last element
+                f = ListNode(head2[x])
+                f.next = None
+                print(f)
+            else:
+                f = ListNode(head2[x])
+                f.next = ll(x+1,y)
+                print(f)
 
-        print(head2)
 
+        #def formlinkedlist(x,y):
+        #[5,3,2,1]
+        for x in range(len(head2)):
+            y = len(head2)-1
+            ll(x,y)
+            #if x == 0:
+             #   nextt = None
+              #  val = head2[x]
+               # #f(val,nextt)
+                #f = ListNode(val)
+              #  f.next = nextt
+            #else:
+             #   nextt=head2[x-1]
+              #  val = head2[x]
+               # #f(val,nextt)
+               # f = ListNode(val)
+              #  f.next = nextt
+
+            
+        return f
+        #print(head2)
+
+        

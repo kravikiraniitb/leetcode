@@ -66,10 +66,12 @@ class Solution:
 
         #def formlinkedlist(x,y):
         #[5,3,2,1]
-        for x in range(len(head2)):
+        #for x in range(len(head2)):
+        x = 0
+        while x < len(head2):
             y = len(head2)-1
             print(x)
-            print(y)
+            #print(y)
             if  x == 0:
                 # y - index last element
                 f = ListNode(head2[x])
@@ -81,7 +83,7 @@ class Solution:
                 f.next = ListNode(head2[x-1])
                 print(f)
 
-            
+            x = x+1
             #ll(x,y)
             #if x == 0:
              #   nextt = None

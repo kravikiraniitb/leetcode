@@ -10,7 +10,6 @@ class Solution:
         l = len(nar)-1
         n1 = l-n
         n2 = 0
-        n3 = n1
         f = ListNode()
         head2 = []
 
@@ -32,13 +31,10 @@ class Solution:
         x = 0
         while x < len(head2):
             y = len(head2)-1
-            print(x)
-            
             if  x == 0:
                 f = ListNode(head2[x])
                 f.next = None
                 nextt = f
-                print(f)
             else:
                 f = ListNode(head2[x])
                 if (bool(p) and bool(nextt)) :

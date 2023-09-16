@@ -8,7 +8,7 @@ class Solution:
     
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         arr = []
-        f = ListNode()
+        
     
         #count = 0
         #head3 = head
@@ -19,6 +19,10 @@ class Solution:
         n2 = 0
         n3 = n1
         
+        #if n1 == 0:
+         #   return None
+        #else:
+        f = ListNode()
         #while n3 != 0:
         #for x in range(l)
              # Move to the next node
@@ -51,17 +55,20 @@ class Solution:
                 n2 = n2+1
                 head = head.next
                 
+        if len(head2) == 0:
+            return None
+        
         head2.reverse()
-        def ll(x,y):
-            if  x == y:
-                # y - index last element
-                f = ListNode(head2[x])
-                f.next = None
-                print(f)
-            else:
-                f = ListNode(head2[x])
-                f.next = ll(x+1,y)
-                print(f)
+        #def ll(x,y):
+         #   if  x == y:
+         #       # y - index last element
+         #       f = ListNode(head2[x])
+         #       f.next = None
+         #       print(f)
+         #   else:
+         #      f = ListNode(head2[x])
+         #       f.next = ll(x+1,y)
+         #       print(f)
 
 
         #def formlinkedlist(x,y):
@@ -108,7 +115,7 @@ class Solution:
                # f = ListNode(val)
               #  f.next = nextt
 
-            
+        print(f)
         return f
         #print(head2)
 

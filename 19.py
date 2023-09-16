@@ -4,54 +4,22 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    
-    
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         arr = []
-        
-    
-        #count = 0
-        #head3 = head
         nar = str(head).split("next:")
         l = len(nar)-1
-        #print(l)
         n1 = l-n
         n2 = 0
         n3 = n1
-        
-        #if n1 == 0:
-         #   return None
-        #else:
         f = ListNode()
-        #while n3 != 0:
-        #for x in range(l)
-             # Move to the next node
-        #head2 = head
         head2 = []
 
-        #while head.next is not None:
-        #    if n2==n1:
-         #       #f.append(current.val)
-          #      head.next == head.next.next
-#
- #               pass
-  #          n2 = n2+1
-   #         #n3 = n3-1
-    #        head = head.next 
-     #       print(head)
-        #for x in range(l):
-        #if head.next is None:
-            #head2.append(head.val)
-        #else:
         while head:
             if n2 == n1:
-                #print(head)
                 n2 = n2+1
                 head = head.next
-
             else:
                 head2.append(head.val)
-                #print(head)
                 n2 = n2+1
                 head = head.next
                 
@@ -59,64 +27,28 @@ class Solution:
             return None
         
         head2.reverse()
-        #def ll(x,y):
-         #   if  x == y:
-         #       # y - index last element
-         #       f = ListNode(head2[x])
-         #       f.next = None
-         #       print(f)
-         #   else:
-         #      f = ListNode(head2[x])
-         #       f.next = ll(x+1,y)
-         #       print(f)
-
-
-        #def formlinkedlist(x,y):
-        #[5,3,2,1]
-        #for x in range(len(head2)):
+    
         p = None
         x = 0
         while x < len(head2):
             y = len(head2)-1
             print(x)
-            #print(y)
-            #p = None
+            
             if  x == 0:
-                # y - index last element
                 f = ListNode(head2[x])
                 f.next = None
                 nextt = f
                 print(f)
             else:
                 f = ListNode(head2[x])
-                #f.next = ll(x-1,y)
-                #f.next = ListNode(head2[x-1])
                 if (bool(p) and bool(nextt)) :
                     f.next = p
                     p = f
-                    #print(p)
                 else:
                     f.next = nextt
                     p = f
-                
-
             x = x+1
-            #ll(x,y)
-            #if x == 0:
-             #   nextt = None
-              #  val = head2[x]
-               # #f(val,nextt)
-                #f = ListNode(val)
-              #  f.next = nextt
-            #else:
-             #   nextt=head2[x-1]
-              #  val = head2[x]
-               # #f(val,nextt)
-               # f = ListNode(val)
-              #  f.next = nextt
-
-        print(f)
         return f
-        #print(head2)
+       
 
         

@@ -67,21 +67,31 @@ class Solution:
         #def formlinkedlist(x,y):
         #[5,3,2,1]
         #for x in range(len(head2)):
+        p = None
         x = 0
         while x < len(head2):
             y = len(head2)-1
             print(x)
             #print(y)
+            #p = None
             if  x == 0:
                 # y - index last element
                 f = ListNode(head2[x])
                 f.next = None
+                nextt = f
                 print(f)
             else:
                 f = ListNode(head2[x])
                 #f.next = ll(x-1,y)
-                f.next = ListNode(head2[x-1])
-                print(f)
+                #f.next = ListNode(head2[x-1])
+                if (bool(p) and bool(nextt)) :
+                    f.next = p
+                    p = f
+                    #print(p)
+                else:
+                    f.next = nextt
+                    p = f
+                
 
             x = x+1
             #ll(x,y)

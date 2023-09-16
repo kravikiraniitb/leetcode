@@ -51,7 +51,7 @@ class Solution:
                 n2 = n2+1
                 head = head.next
                 
-        #head2.reverse()
+        head2.reverse()
         def ll(x,y):
             if  x == y:
                 # y - index last element
@@ -68,7 +68,21 @@ class Solution:
         #[5,3,2,1]
         for x in range(len(head2)):
             y = len(head2)-1
-            ll(x,y)
+            print(x)
+            print(y)
+            if  x == 0:
+                # y - index last element
+                f = ListNode(head2[x])
+                f.next = None
+                print(f)
+            else:
+                f = ListNode(head2[x])
+                #f.next = ll(x-1,y)
+                f.next = ListNode(head2[x-1])
+                print(f)
+
+            
+            #ll(x,y)
             #if x == 0:
              #   nextt = None
               #  val = head2[x]

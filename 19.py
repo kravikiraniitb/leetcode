@@ -37,7 +37,7 @@ class Solution:
                 nextt = f
             else:
                 f = ListNode(head2[x])
-                if (bool(p) and bool(nextt)) :
+                if p :
                     f.next = p
                     p = f
                 else:
@@ -45,6 +45,3 @@ class Solution:
                     p = f
             x = x+1
         return f
-       
-
-        

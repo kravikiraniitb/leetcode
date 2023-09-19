@@ -16,9 +16,10 @@ def generateParenthesis(n):
             break
             print(ar3)
 
-    while len(ar3) < 2**n:
+    while len(ar3) < 2**(2*n):
         one_l()
     #return ar3
+    #print(ar3)
     ar4=[]
     for y in ar3:
         m=0
@@ -30,5 +31,15 @@ def generateParenthesis(n):
                 n=n+1
                 if n>m:
                     break
+        if m == n:
+            ar4.append(y)
+    #return ar4
+    ar5 = []
+    for l in ar4:
+        s = ""
+        for k in l:
+            s=s+k
+        ar5.append(s)
+    return ar5
 
 print(generateParenthesis(2))

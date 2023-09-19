@@ -1,25 +1,43 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        f_ar = []
-        b_ar = []
-        for x in range(n):
-            f_ar.append("(")
+        ar3=[[]]
+        def one_l():
+            #ar2_c = ar2.copy()
+            for x in ar3:
+                x1 = x.copy()
+                x2 = x.copy()
 
-        for x in range(n):
-            b_ar.append(")")
+                x1.append("(")
+                x2.append(")")
+                ar3.remove(x)
+                ar3.append(x1)
+                ar3.append(x2)
+                #print(ar3)
+                break
+                print(ar3)
 
-        #t = 2**(2*n)
-        arr = []
-        #()()()
-    def factorial(f):
-        if (f == 0 or f ==1):
-            return 1
-
-        return f*factorial(f-1)
-
-        c= int(factorial(2*n)/(factorial(n)*factorial(n)))
-
-        for y in range(c):
-            n=0
+        while len(ar3) < 2**(2*n):
+            one_l()
+        #return ar3
+        #print(ar3)
+        ar4=[]
+        for y in ar3:
             m=0
-
+            n=0
+            for z in y:
+                if z == "(":
+                    m=m+1
+                else:
+                    n=n+1
+                    if n>m:
+                        break
+            if m == n:
+                ar4.append(y)
+        #return ar4
+        ar5 = []
+        for l in ar4:
+            s = ""
+            for k in l:
+                s=s+k
+            ar5.append(s)
+        return ar5

@@ -1,6 +1,7 @@
 ar2=[]
 ar3=[[]]
 def generateParenthesis(n):
+    ar3=[[]]
     def one_l():
         #ar2_c = ar2.copy()
         for x in ar3:
